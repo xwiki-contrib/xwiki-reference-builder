@@ -2,16 +2,15 @@ package org.xwiki.contrib.referencebuilder.internal;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 import org.xwiki.component.annotation.Component;
-import org.xwiki.component.annotation.InstantiationStrategy;
-import org.xwiki.component.descriptor.ComponentInstantiationStrategy;
 import org.xwiki.component.manager.ComponentManager;
 import org.xwiki.script.service.ScriptService;
 
 @Component
 @Named("referencebuilder")
-@InstantiationStrategy(ComponentInstantiationStrategy.PER_LOOKUP)
+@Singleton
 public class ReferenceBuilderScriptService implements ScriptService
 {
     @Inject
